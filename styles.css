@@ -1,0 +1,108 @@
+body{
+  background: #ddd;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+
+}
+
+.stage{
+  margin: 0 auto; /* センター揃え */
+  width: 500px;
+  height: 260px;
+  /*border: 2px solid #bbb;*/
+  overflow: hidden; /* クラスからはみ出ている領域を隠す */
+}
+
+#cards{
+  width: 1500px; /* カード３枚分 */
+  height: 260px;
+  /*background: #cae6f4;*/
+  transition: 0.8s;
+}
+
+.card{
+  width: 450px;
+  height: 210px;
+  padding: 25px;
+  background: #fff;
+  float: left;  /*cardに対して左詰め*/
+  border-radius: 10px; /*クラスを丸くする*/
+}
+
+.card + .card{
+  margin-left: 500px;
+}
+
+#cards.move{
+  transform: translate(-1000px, 0);/* moveクラスに対してx座標移動 */
+}
+
+.left-side{
+  width: 160px;
+  float: left;
+  border-radius: 10px;
+  background-size: cover; /* 背景画像を表示領域に合わせる */
+}
+
+.left-side img{
+    border-radius: 10px;
+}
+
+.right-side{
+  width: 260px;
+  float: right;
+  text-align: center;
+}
+
+.right-side h1{
+  margin: 10px 0;
+}
+
+.card input{
+  width: 230px;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.btn{
+  cursor: pointer;
+  width: 200px;
+  height: 45px;
+  background: #35ac64;
+  box-shadow: 0 5px 0 green;
+  color: #fff;
+  line-height: 45px; /* 行高 */
+  border-radius: 20px;
+  margin: 0 auto;
+  display: block;/* 要素をブロックとして扱う、またその表示形式指定 */
+  text-decoration: none; /* リンク等による下線等をなくす */
+}
+
+#tweet{
+  background: #1da1f2;
+  box-shadow: 0 5px 0 #006dbf;
+  margin-bottom: 20px;
+}
+
+#retry{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bg-fire{
+  background-image: url(img/bg-fire.gif); /* styles.cssから見た相対パス指定 */
+}
+.bg-water{
+  background-image: url(img/bg-water.gif);
+}
+.bg-thunder{
+  background-image: url(img/bg-thunder.gif);
+}
+
+#result_name,
+#result_msg,
+#result_job,
+#result_type{
+  font-weight: bold;
+}
